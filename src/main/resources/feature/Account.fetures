@@ -1,0 +1,26 @@
+Feature: Login
+  As a user
+  I can add and view income and expense
+  so that I know how much money I have
+
+  Scenario: Add Income
+    Given a user has 0 for account
+    When I add Income amount 100
+    Then I have income amount 100
+    so I have account amount 100
+
+  Scenario: Expense
+    Given a user has 100 for account
+    When I expense amount 50
+    Then I have Expense amount 50
+    so I have account amount 50
+
+  Scenario: Check Income
+    Given a user has 1000 for income
+    When I want to check my income that is 1000
+    Then system shows my income amount 1000
+
+  Scenario: Check Expense
+    Given a user has 500 for expense
+    When I want to check my expense that is 500
+    Then system shows my expense amount 500
